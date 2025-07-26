@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity implements BookAdapter.OnBoo
     private RecyclerView recyclerView;
     private List<String> bookList = new ArrayList<>();
     private BookAdapter adapter;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
