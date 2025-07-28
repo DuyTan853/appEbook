@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:hint="Username"
             android:padding="14dp"
-            android:background="@drawable/edittext_bg"
+            android:textColorHint="#999"
             android:textColor="@color/black"
             android:layout_marginTop="32dp"/>
 
@@ -55,8 +55,8 @@
             android:layout_height="wrap_content"
             android:hint="Password"
             android:padding="14dp"
-            android:background="@drawable/edittext_bg"
             android:inputType="textPassword"
+            android:textColorHint="#999"
             android:textColor="#000"
             android:layout_marginTop="16dp"/>
 
