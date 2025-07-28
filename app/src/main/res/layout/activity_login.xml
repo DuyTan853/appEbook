@@ -1,27 +1,85 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:padding="50dp"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <EditText
-        android:id="@+id/editTextUsername"
-        android:hint="Username"
+    <!-- Background -->
+    <ImageView
+        android:id="@+id/bgImage"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/login_bg"/>
 
-    <EditText
-        android:id="@+id/editTextPassword"
-        android:hint="Password"
-        android:inputType="textPassword"
+    <!-- Overlay tối giúp nội dung nổi bật -->
+    <View
+        android:id="@+id/overlay"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"/>
+        android:layout_height="match_parent"
+        android:background="#80000000"/>
 
-    <Button
-        android:id="@+id/buttonLogin"
+    <!-- Nội dung chính -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:padding="24dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Login" />
-</LinearLayout>
+        android:layout_height="wrap_content">
+
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="187dp"
+            android:layout_height="139dp"
+            android:layout_gravity="center"
+            android:contentDescription="EBOOK Logo"
+            android:src="@drawable/logo" />
+
+        <!-- Tiêu đề -->
+
+        <!-- Username -->
+        <EditText
+            android:id="@+id/editTextUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:padding="14dp"
+            android:background="@drawable/edittext_bg"
+            android:textColor="@color/black"
+            android:layout_marginTop="32dp"/>
+
+        <!-- Password -->
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:padding="14dp"
+            android:background="@drawable/edittext_bg"
+            android:inputType="textPassword"
+            android:textColor="#000"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Login Button -->
+        <Button
+            android:id="@+id/buttonLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textColor="#FFF"
+            android:layout_marginTop="24dp"
+            android:padding="14dp"/>
+
+        <!-- Forgot Password -->
+        <TextView
+            android:id="@+id/tvForgot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Forgot password?"
+            android:textColor="#BBDEFB"
+            android:textSize="14sp"
+            android:layout_marginTop="12dp"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+</RelativeLayout>
